@@ -1,7 +1,9 @@
+
 const sliderWrapper = document.querySelector(".slider-wrapper");
 const slides = document.querySelectorAll(".slide");
 const prevButton = document.querySelector(".prev-button");
 const nextButton = document.querySelector(".next-button");
+const dot = document.querySelector("#dot");
 let slidePosition = 0;
 
 prevButton.addEventListener("click",prevSlide) 
@@ -30,9 +32,11 @@ function atualizarSlider() {
 }
 slides[0].classList.add("active");
 
-
-let timerslide = setInterval(atua,5000)
+ 
+let timerslide = setInterval(atua,3000)
 function atua(){
  prevSlide()
     
 }
+
+

@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="/images/face pet logo.png" type="image/x-icon">
     <title>face Pets</title>
 </head>
 <body>
+    <button id="home"><a href="#bannerArea"></a></button>
     <header>
         <div class="header">
             <div id="menu-area">
@@ -22,10 +24,11 @@
                     </div>
                     <nav id="menu">
                         <ul>
-                            <li><a href="">home</a></li>
-                            <li><a href="">perfis</a></li>
-                            <li><a href="">sobre nós</a></li>
-                            <li><a href="">mais</a></li>
+                            <li><a href="#bannerArea">home</a></li>
+                            <li><a href="#pefis-section">perfis</a></li>
+                            <li><a href="#about-section">sobre nós</a></li>
+                            <li><a href="#infor-cards">projetos</a></li>
+                            <li><a href="#footer-section">fale conosco</a></li>
                         </ul>
                     </nav> 
                 </div>
@@ -33,24 +36,66 @@
             </div>
            
             <div id="bannerArea">
+                <div class="dots">
+                    <div id="dot" ></div>
+                    <div id="dot"></div>
+                    <div id="dot"></div>
+                  </div>
                 <div class="slider-container">
                     <div class="slider-wrapper">
-                      <img src="/images/bulldog back.jpg" class="slide" >
-                      <img src="/images/dog-bl.jpg" class="slide" id="slideImg">
-                      <img src="/images/dog-br.jpg" class="slide" id="slideImg2">
+                        <div class="slide" id="">
+                                    <div class="sliderText">
+                                        <p>
+                                            A vida é mais completa com um 
+                                               <strong>companheiro</strong>  peludo ao seu lado.
+                                          <strong> Adote </strong>  um pet e descubra o amor
+                                              mais puro e  <strong>verdadeiro!</strong>
+                                        </p>
+                                    </div>
+                                <img src="/images/bulldog back.jpg" >
+                        </div>
+                        <div class="slide" id="">
+                            <div class="sliderText" id="slidertxt">
+                                <p>
+                                    Dê uma segunda chance a um 
+                                  <strong>animalzinho</strong>   abandonado. 
+                                   <strong>Adote</strong>   um pet e faça a diferença
+                                    na vida dele, 
+                                    enquanto ele transforma a sua.
+                                </p>
+                            </div>
+                            <img src="/images/dog-bl.jpg" >
+                        </div>
+                        <div class="slide" id="">
+                            <div class="sliderText" id="slidertxt2">
+                                <p>
+                               <strong>encontre </strong>     um  amor incondicional
+                                     que só um  <strong>bichinho</strong>de estimação 
+                                     pode oferecer.
+                                </p>
+                            </div>
+                            <img src="/images/dog-br.jpg" >
+                        </div>
+                     
+                     
+                      
                     </div>
-                    <button class="prev-button">&lt;</button>
-                    <button class="next-button">&gt;</button>
-                  </div>
+                        <button class="prev-button">&lt;</button>
+                        <button class="next-button">&gt;</button>
+                    </div>
+                
             </div>
-        </div>
+            
+        
 
+       
     </header>
     <section id="about-section">
         <div id="aboutArea" class="container">
             <div id="info-section">
              
                 <div id="imageArea">
+                    <!-- -->
                    <img src="/images/vista-frontal-de-um-lindo-cachorro-com-co-de-copia.jpg" alt="">
                 </div>
                 <div id="infoArea">
