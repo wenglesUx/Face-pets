@@ -312,17 +312,17 @@ footer{
   font-size:20px;
 }
 #card-one{
-  background-image: url(/images/closeup-shot-one-ginger-cat-hugging-licking-other-isolated-white-wall.jpg);
+  background-image: url(/images/closeup-shot-one-ginger-cat-hugging-licking-other-isolated-white-wall\ \(1\).jpg);
   background-position: center;
   background-size: cover;
 }
 #card-two{
-  background-image: url(/images/adorable-kitty-with-monochrome-wall-her.jpg);
+  background-image: url(/images/adorable-kitty-with-monochrome-wall-her\ \(1\).jpg);
   background-position: center;
   background-size: cover;
 }
 #card-three{
-  background-image: url(/images/run-maltipu-little-dog-is-posing\ \(1\).jpg);
+  background-image: url(/images/run-maltipu-little-dog-is-posing\ \(1\)\ \(1\).jpg);
   background-position: center;
   background-size: cover;
 }
@@ -388,7 +388,7 @@ footer{
 #frame{
   height:100%;
   width: 100%;
-  background-image: url(/images/gold-bengal-cat-white-space.jpg);
+  background-image: url(/images/gold-bengal-cat-white-space\ \(1\).jpg);
   background-position: center;
   background-size: cover;
   height: 50vh;
