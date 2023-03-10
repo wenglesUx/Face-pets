@@ -11,6 +11,7 @@
  display: none;
 }
 #home{
+  display:none;
   height:30px;
   width:30px;
   background-color: #80c1e4;
@@ -86,13 +87,13 @@ padding-top: 10px;
   height:calc(100vh - 70px);
   overflow: hidden;
 } 
-  .slider-wrapper {
+.slider-wrapper {
     position: absolute;
     display: flex;
     width: 100%;
     transition: 0.5s ease-in-out;
 }
-  .slider-wrapper img {
+.slider-wrapper img {
    width: 100vw;
   }
 .slide{
@@ -289,18 +290,18 @@ footer{
   height:400px;
   width:400px;
   padding:20px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
   padding-top: 200px;
   color: transparent;
   overflow: hidden;
   box-shadow: 1px 1px 4px  gray;
 }
 .card:hover{
-  width:95%;
+  width:100%;
   padding-top: 0;
-  color: black;
+  color: rgb(0, 0, 0);
   opacity: 1;
-  box-shadow: 1px 1px 10px   #003c76;
+  box-shadow: 1px 1px 10px   #000000;
 }
 .card h3{
   font-size:35px;
@@ -332,6 +333,7 @@ footer{
   background-color: #c7e1e9;
   z-index: 0;
   margin: 20px 0;
+  overflow: hidden;
 }
 .section-perfil{
   display: flex;
@@ -340,12 +342,28 @@ footer{
   flex-direction: column;
   height: 100%;
 }
+#section-perfil img{
+  height: 60%;
+}
+#error-image{
+  height:70%;
+
+}
 #Lmsg{
   font-size:200px;
   color: rgb(255, 72, 72);
 }
 #msg{
-  font-size:50px
+  font-size:50px;
+  color:white;
+  background-color: rgba(255, 9, 5, 0.5);
+  border-radius: 30px;
+  padding: 10px;
+}
+#low-msg{
+  font-size: 10px;
+  text-align:center;
+  color:#003c76
 }
 /* footer section*/
 
@@ -394,7 +412,18 @@ position: relative;
   background-position: center;
   opacity: 0.2;
 }
-
+#footer-area-information{
+z-index: 999; 
+height: auto;
+display: flex;
+gap: 3rem;
+width: 100%;
+}
+#social-link:hover{
+ font-size:40px;
+ transition: 0.5s ease;
+ border-bottom: 2px solid white;
+}
 #social,
 #contatos,
 #creditos{
@@ -436,11 +465,22 @@ position: relative;
   transition:0.5s ease-in-out;
 }
 
-hr{
+#footer-area-information hr{
   height: 300px;
   margin-top:40px ;
   opacity: 0.4;
 }
+#menu-mb{
+opacity: 1;
+}
+#menu-close{
+ opacity: 0;
+}
+#lsmg img{
+  height:300px
+}
+
+
 
 @media(max-width:1044px){
 
@@ -485,8 +525,7 @@ hr{
     gap:0.5rem;
     padding: 20px;
     font-size:15px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+   
   }
   #frame {
     height: 87%;
@@ -494,7 +533,8 @@ hr{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }   
-  #areaInformation {
+  #areaInformation,
+  #footer-area-information  {
     flex-direction:column ;
     align-items: center;
     gap: 1rem;
@@ -502,6 +542,10 @@ hr{
     margin-bottom:20px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    }
+
+    #footer-area-information hr{
+      height: 2px;
     }
     #social,
     #contatos,
@@ -568,7 +612,8 @@ hr{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }   
-  #areaInformation {
+  #areaInformation,
+  #footer-area-information {
     flex-direction:column ;
     align-items: center;
     gap: 1rem;
@@ -577,6 +622,9 @@ hr{
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 
+  }
+  #footer-area-information hr{
+    height: 2px;
   }
   #social,
   #contatos,
@@ -627,12 +675,22 @@ hr{
   #infoArea p{
     font-size:15px;
   }
-  #areaInformation {
+  #areaInformation,
+  #footer-area-information{
     flex-direction: column;
     height: 100%;
     gap:1rem;
     padding: 15px 20px;
     margin-top:0 ;
+  }
+  #footer-area-information hr{
+    height: 2px;
+  }
+  #error-image {
+    height: 60%;
+  }
+    #msg {
+      font-size: 30px;
   }
   #imageArea{
     width: 100%;
@@ -679,15 +737,25 @@ hr{
   }
   #menu{
     position: relative;
+   
+  }
+  nav{
+    display:none ;
+   transition: 0.5 ease-in-out;
+  }
+  .activedt{
+    
+  display: block;
+    transition: 0.5 ease-in-out;
   }
   ul{
     align-items: center;
     flex-direction: column;
     position: absolute;
     right:0;
-    background-color: rgba(80,167,184,0.9);
+    background-color: rgba(254, 97, 45, 0.9);
     z-index: 99;
-    height: 400px;
+    height:calc(100vh - 70px) ;
     width: 90vw;
     padding-top: 20px;
     transition: 0.3s linear;
@@ -695,7 +763,9 @@ hr{
     margin-right: -22px;
     border-bottom-left-radius: 5px;
     border-bottom-left-radius: 10px;
-    display: none;
+    transition: 0.5 ease-in-out;
+   
+ 
   }
 }
 @media(max-width:375px){

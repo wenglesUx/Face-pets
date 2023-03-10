@@ -1,4 +1,9 @@
 
+const mobileBtn = document.querySelector('#menu-mobile')
+const mobilemenu = document.querySelector('nav')
+const openIcon = document.querySelector('#menu-mb')
+const closeIcon = document.querySelector('#menu-close')
+
 const sliderWrapper = document.querySelector(".slider-wrapper");
 const slides = document.querySelectorAll(".slide");
 const prevButton = document.querySelector(".prev-button");
@@ -32,11 +37,22 @@ function atualizarSlider() {
 }
 slides[0].classList.add("active");
 
- 
+
 let timerslide = setInterval(atua,3000)
 function atua(){
  prevSlide()
     
 }
 
+mobileBtn.addEventListener('click',menuInteraction)
 
+function menuInteraction(){
+mobilemenu.classList.toggle('activedt')
+if(mobilemenu.classList.contains('activedt') == true){
+  openIcon.style.opacity = '0'
+  closeIcon.style.opacity = '1'
+}else{
+  openIcon.style.opacity = ''
+  closeIcon.style.opacity = ''
+}
+}
